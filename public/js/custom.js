@@ -43,8 +43,10 @@ $('#date').bootstrapMaterialDatePicker({ time: false,
             input_rad.name="slot";
             
             
-            input_rad.value=i.slot;
+            
             const timeslot=moment.unix(i.slot/1000).format("HH:mm");
+            input_rad.value=timeslot;
+            
             label.innerHTML=`${timeslot}`
             document.getElementById("rad-group").appendChild(label); 
             label.appendChild(input_rad); 
@@ -88,6 +90,3 @@ $('#date').bootstrapMaterialDatePicker({ time: false,
  $('#submit').click((e)=>{
      $('#form').reset();
  })
-    
- const formatted = moment.unix(1588422600000).format("HH:mm");
-    console.log(formatted)

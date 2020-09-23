@@ -8,12 +8,12 @@ router.post('/submit',(req,res)=>{
         res.send("error")
     }
 
-    const formatted = moment.unix(req.body.slot).format("HH:mm");
-    console.log(formatted)
+    
+    console.log(req.body.slot)
     const output=`
     <h3>NotchUp Trial Class Booked successfully</h3>
     <p>Dear ${req.body.parentsName},</p>
-    <p>${req.body.childsName}'s class on ${req.body.date} at ${formatted} has been successfully booked. </p>
+    <p>${req.body.childsName}'s class on ${req.body.date} at ${req.body.slot} has been successfully booked. </p>
     `;
  
 
