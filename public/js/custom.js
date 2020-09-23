@@ -89,4 +89,5 @@ $('#date').bootstrapMaterialDatePicker({ time: false,
      $('#form').reset();
  })
     
- 
+ const formatted = moment.unix(1588422600000).format("HH:mm");
+    console.log(formatted)
