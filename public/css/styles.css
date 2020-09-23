@@ -82,7 +82,10 @@ input[type=number] {
       transform: rotate(360deg);
     }
   }  
-
+.cust{
+    margin-right: 10px;
+    margin-left: 10px;
+}
   #card {
     position: relative;
     top: 110px;
