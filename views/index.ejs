@@ -1,0 +1,81 @@
+<%- include('includes/top.ejs') %>
+
+<section id="main" class="container">
+    <div class="text-center mt-4">
+      <h2 style="font-weight: 400; color: #0054a6;">Notch Up trial class booking</h2>
+    </div>
+    
+    <form action="/submit" method="POST" id="form" >
+        <div class="md-form custom">
+            <i class="fas fa-user prefix"></i>
+            <input type="text" id="pname" name="parentsName" class="form-control" required>
+            <label for="pname">Parent's Name</label>
+          </div>
+        <div class="md-form custom">
+            <i class="fas fa-phone prefix"></i>
+            <input type="number" id="phoneNumber" name="parentsPhoneNumber"  class="form-control" required>
+            <label for="phoneNumber">Parent's Contact Number</label>
+          </div>
+        <div class="md-form custom">
+            <i class="fas fa-envelope prefix"></i>
+            <input type="email" id="email" name="email" class="form-control" required>
+            <label for="email">E-mail address</label>
+          </div>
+          <div class="md-form custom">
+            <i class="fas fa-child prefix"></i>
+            <input type="text" id="cname" name="childsName"  class="form-control" required>
+            <label for="cname">Child's Name</label>
+          </div>
+          <div class="md-form custom">
+            <i class="fas fa-user prefix"></i>
+            <input type="number" id="age" name="childsAge"  class="form-control" required>
+            <label for="age">Child's Age</label>
+          </div>
+          <div class="md-form custom">
+            <i class="fas fa-book prefix"></i>
+            <select class="browser-default custom-select" id="courseName" name="courseName" >
+                
+                <option value="Scratch Junior">Scratch Junior</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Game Development">Game Development</option>
+                <option value="App Development">App Development</option>
+                <option value="Python">Python</option>
+              </select>
+          </div>
+          <div class="md-form custom">
+            <i class="fas fa-calendar prefix"></i>
+            <input placeholder="Selected date" type="text" id="date" name="date" class="form-control datepicker" required>
+            <label for="date"></label>
+          </div>
+          <div class="form-group ">
+            
+        <div class="btn-group flex-wrap" id="rad-group" data-toggle="buttons">
+            
+           
+          
+        </div>
+        <div class="noslot">
+
+        </div>
+    </div>
+          <div class="md-form custom text-center">
+            <input type="submit" id="submit" value="Book" class="btn primary-bg py-2 px-3">
+          </div>
+    </form>
+
+    <!-- Modal Loader -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="loader" tabindex="-1" role="dialog" aria-labelledby="loader"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content py-4 text-center">
+        <div class="loader circle text-center"></div>
+        <h5>Loading...</h5>
+      </div>
+    </div>
+  </div>
+    
+</section>
+
+<%- include('includes/end.ejs') %>
